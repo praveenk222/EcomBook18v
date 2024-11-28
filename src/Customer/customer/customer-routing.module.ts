@@ -11,7 +11,7 @@ import { OrderHistoryComponent } from './profile/order-history/order-history.com
 import { VerifyComponent } from './profile/verify/verify.component';
 
 const routes: Routes = [
-  {path:'ProdcutDetails/:productID/:sellerID', component:ProdcutDetailsComponent},
+  {path:'ProdcutDetails/:ProductID', component:ProdcutDetailsComponent},
   {path:'OrderSummuary', component:OrdersummaryComponent},
   {path:'OrderHistory', component:OrderHistoryComponent},
   {path:'notication', component:NotificationsComponent},

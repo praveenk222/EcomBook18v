@@ -49,7 +49,7 @@
             </div>
             <div class="col-sm-7 ">
                 <div class="pro-details">
-                    <h2> {{product?.productName |uppercase}} </h2>
+                    <h2> {{product?.ProductName |uppercase}} </h2>
                     <h3> {{members?.userName}} </h3>
                     <h4> Special priceends in less than </h4>
 
@@ -63,8 +63,8 @@
                     </div>
 
                     <hr>
-                    <div> MRP {{product?.standardPrice | number: '1.2-2'}} (Inclusive of all
-                        taxes)Rs.{{product?.discount}}% OFF </div>
+                    <div> MRP {{product?.Price | number: '1.2-2'}} (Inclusive of all
+                        taxes)Rs.{{product?.Discount}}% OFF </div>
                     <h1> Rs{{product?.standardPrice | number: '1.2-2'}} <span class="price-off"> {{product?.discount}} %
                             OFF </span></h1>
 
@@ -74,7 +74,7 @@
                                 <label> Price: </label>
                             </div>
                             <div class="col-sm-10">
-                                <label class="orange-txt"> ฿ {{product?.standardPrice | number: '1.2-2'}}</label>
+                                <label class="orange-txt"> ฿ {{product?.StandardPrice | number: '1.2-2'}}</label>
                             </div>
                         </div>
                         <div class="form-group ">
@@ -91,12 +91,12 @@
                                 </label>
                             </div>
                             <div class="col-sm-10">
-                                <label class="orange-txt">{{product?.paymentOption}} </label>
+                                <label class="orange-txt">{{product?.PaymentOption}} </label>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-4">
-                                <label *ngIf="product?.stockQty != 0"> Quantity: {{product?.stockQty}}</label>
+                                <label *ngIf="product?.StockQty != 0"> Quantity: {{product?.StockQty}}</label>
                                 <div class="example-chip-list" *ngIf="product?.stockQty == 0">
 
                                     <label class="orange-txt">
@@ -216,7 +216,7 @@
                     <tbody>
                         <tr>
                             <td width="400" class="first"> Product Name: </td>
-                            <td> {{product?.productName | uppercase}}</td>
+                            <td> {{product?.ProductName | uppercase}}</td>
                             <td> Age: </td>
                             <td> {{product?.age}}</td>
                         </tr>
@@ -242,7 +242,7 @@
                             <td>Talent:</td>
                             <td>{{product?.talents}}</td>
                             <td>Additional Information:</td>
-                            <td>{{product?.productName}} </td>
+                            <td>{{product?.ProductName}} </td>
                         </tr>
                     </tbody>
 

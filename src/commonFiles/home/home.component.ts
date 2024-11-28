@@ -120,7 +120,8 @@ export class HomeComponent implements OnInit {
   }
   productList() {
     // this.spinnerService.show();
-    this.fmss.productSearch(this.form).subscribe(
+    // this.fmss.productSearch(this.form).subscribe(
+    this.fmss.productAll().subscribe(
       (res) => {
       console.log(res);
       this.product = res;

@@ -67,13 +67,16 @@ export class FmsService {
   productSearch(payload: any) {
     return this.http.post(`${this.baseURL}productMasters/productSearch`, payload);
   }
+  productAll() {
+    return this.http.get(`${this.baseURL}productMasters`);
+  }
   getStockList(){
   return this.http.get(`${this.baseURL}Lookups/StockType`)
   }
   getProductImages(productId: any) {
     return this.http.get(`${this.baseURL}ProductImages/List/` + productId)
   }
-  produtListById(productId: any) {
+  produtListById(productId: number) {
     return this.http.get(`${this.baseURL}ProductMasters/` + productId)
   }
   userAddressList() {

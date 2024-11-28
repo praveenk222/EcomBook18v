@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   /* Production/Beta URL End points */
-  api:'http://fmsapicore.logiconglobal.com/api/',
+  //api:'http://fmsapicore.logiconglobal.com/api/',
   ProductUrl:"http://fmsapicore.logiconglobal.com/Uploads/Products",
   imgUrl:"http://fmsapicore.logiconglobal.com/api/Images",
 
   /* Local host URL end points  */
   
-  // api:'http://localhost:13866/api/',
+   api:'http://localhost:3001/api/',
   // ProductUrl:"http://localhost:13866/Uploads/Products",
   // imgUrl:"http://localhost:13866/Images/",
 azureblobUrl:'https://audiencestreetcreatives.blob.core.windows.net/videos/'

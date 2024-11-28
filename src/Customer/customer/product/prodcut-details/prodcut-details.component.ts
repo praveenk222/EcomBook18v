@@ -22,7 +22,7 @@ export class ProdcutDetailsComponent implements OnInit {
   matDialogRef!: MatDialogRef<LoginComponent>;
   product: any;
   userdetails: any;
-  productID: string | null;
+  productID: any | null;
   productPicUrl = environment.ProductUrl;
   images: any;
   fst: any;
@@ -44,8 +44,7 @@ export class ProdcutDetailsComponent implements OnInit {
     private matDialog: MatDialog
   ) {
     this.userdetails = JSON.parse(localStorage.getItem('user') || '{}');
-    this.productID = this.router.snapshot.paramMap.get('productID');
-    this.sellerID = this.router.snapshot.paramMap.get('sellerID');
+    this.productID = this.router.snapshot.paramMap.get('ProductID');
     localStorage.setItem('productID', JSON.stringify(this.productID));
     this.imgList = [
       { name: 'assets/images/consult/c1.jpg' },
@@ -59,8 +58,8 @@ export class ProdcutDetailsComponent implements OnInit {
     this.userid = this.as.getToken();
     this.getComments();
     this.productList();
-    this.getImages();
-    this.getMember();
+    // this.getImages();
+    // this.getMember();
     setInterval(() => {
       this.current = ++this.current % this.images.length;
     }, 1000);
@@ -99,6 +98,7 @@ export class ProdcutDetailsComponent implements OnInit {
     });
   }
   productList() {
+    this.productID= Number(this.productID)
     this.fms.produtListById(this.productID).subscribe((data) => {
       this.product = data;
       //  this.product.isGuest = false;
